@@ -56,10 +56,9 @@ Run a custom launch file from your own package:
 roslaunch my_turtlebot execute_trajectory.launch
 ```
 This launch file will:
-Start a Python script for a predefined trajectory
-Begin recording /odom, /imu, and /scan with rosbag
-Stop recording automatically at the end of the motion
-
+- Start a Python script for a predefined trajectory
+- Begin recording /odom, /imu, and /scan with rosbag
+- Stop recording automatically at the end of the motion
 ✅ Ensures smooth, synchronized execution and data recording 
 
 📊 Data Extraction (Offline)

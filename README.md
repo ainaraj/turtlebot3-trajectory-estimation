@@ -73,8 +73,6 @@ my_turtlebot/
 - bags/             # For storing rosbag recordings
 - launch/           # Launch files for executing trajectories
 - scripts/          # Python scripts defining robot motion
-- CMakeLists.txt
-- package.xml
 
 Build the workspace:
 ```bash

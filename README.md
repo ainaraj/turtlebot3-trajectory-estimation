@@ -59,7 +59,7 @@ This launch file will:
 - Start a Python script for a predefined trajectory
 - Begin recording /odom, /imu, and /scan with rosbag
 - Stop recording automatically at the end of the motion
-✅ Ensures smooth, synchronized execution and data recording 
+- Ensure that robot motion and data recording are synchronized, resulting in accurate and reliable timestamps
 
 📊 Data Extraction (Offline)
 You can extract CSV files from .bag files for analysis:

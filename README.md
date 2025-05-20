@@ -57,7 +57,7 @@ To launch the simulation:
 
 ```bash
 export TURTLEBOT3_MODEL=burger
-roslaunch turtlebot3_gazebo turtlebot3_plaza_world.launch
+roslaunch turtlebot3_gazebo name_world.launch
 ```
 
 ### 2. Custom Package Setup

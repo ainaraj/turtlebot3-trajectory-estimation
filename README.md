@@ -13,7 +13,7 @@ To ensure compatibility and stability, the project was developed using **Virtual
 - **Gazebo** for 3D simulation  
 - **Python** for trajectory control  
 - **rosbag** for data logging  
-- **Gazebo model_states** used as ground truth  
+- `/gazebo/model_states` used as ground truth  
 
 ---
 
@@ -22,7 +22,7 @@ To ensure compatibility and stability, the project was developed using **Virtual
 - Create **custom simulation environments** in Gazebo  
 - Program **short and complex trajectories** for TurtleBot3  
 - Automate **trajectory execution and data recording**  
-- Record sensor data from `/odom`, `/imu`, `/scan`  
+- Record sensor data from `/odom`, `/imu`, and `/scan`  
 - Compare estimated trajectories with ground truth  
 - Ensure **synchronized and reproducible runs**  
 
@@ -42,18 +42,52 @@ turtlebot3-trajectory-estimation/
 
 ## 🚀 Usage
 
+### 0. Start ROS Core
+
+Before anything else, make sure to start `roscore` in a separate terminal:
+
+```bash
+roscore
+```
+
 ### 1. Add your custom world
 Place your `.world` file in `turtlebot3_gazebo/worlds/`  
 Reference it in a launch file in `turtlebot3_gazebo/launch/`.
+Then launch the simulation:
 
-Launch the world:
 ```bash
-roslaunch turtlebot3_gazebo custom_world.launch
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_gazebo turtlebot3_plaza_world.launch
 ```
-### 2. Execute a trajectory and record data
+
+### 2. Custom Package Setup
+Create a catkin workspace if you don’t already have one:
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+```
+
+Then, create your custom package (e.g., my_turtlebot) inside src/ with the following structure:
+my_turtlebot/
+├── bags/             # For storing rosbag recordings
+├── launch/           # Launch files for executing trajectories
+├── scripts/          # Python scripts defining robot motion
+├── CMakeLists.txt
+└── package.xml
+
+Build the workspace:
+```bash
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+```
+
+
+### 3. Execute a trajectory and record data
 Run a custom launch file from your own package:
 ```bash
-roslaunch my_turtlebot execute_trajectory.launch
+roslaunch execute_trajectory.launch
 ```
 This launch file will:
 - Start a Python script for a predefined trajectory

@@ -85,9 +85,9 @@ source devel/setup.bash
 
 
 ### 3. Execute a trajectory and record data
-Run a custom launch file from your own package:
+Run the launch file to execute the trajectory. For example :
 ```bash
-roslaunch execute_trajectory.launch
+roslaunch plaza_path.launch
 ```
 This launch file will:
 - Start a Python script for a predefined trajectory

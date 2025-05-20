@@ -14,7 +14,7 @@ To ensure compatibility and stability, the project was developed using **Virtual
 - **Python** for trajectory control  
 - **rosbag** for data logging  
 - `/gazebo/model_states` used as ground truth  
-
+ 
 ---
 
 ## 🎯 Objectives

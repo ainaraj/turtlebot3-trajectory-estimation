@@ -94,6 +94,7 @@ This launch file will:
 - Ensure that robot motion and data recording are synchronized, resulting in accurate and reliable timestamps
 
 📊 Data Extraction (Offline)
+
 You can extract CSV files from .bag files for analysis:
 ```bash
 rostopic echo -b my_file.bag -p /odom > odom.csv

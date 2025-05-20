@@ -70,11 +70,11 @@ catkin_init_workspace
 
 Then, create your custom package (e.g., my_turtlebot) inside src/ with the following structure:
 my_turtlebot/
-├── bags/             # For storing rosbag recordings
-├── launch/           # Launch files for executing trajectories
-├── scripts/          # Python scripts defining robot motion
-├── CMakeLists.txt
-└── package.xml
+- bags/             # For storing rosbag recordings
+- launch/           # Launch files for executing trajectories
+- scripts/          # Python scripts defining robot motion
+- CMakeLists.txt
+- package.xml
 
 Build the workspace:
 ```bash
@@ -87,7 +87,7 @@ source devel/setup.bash
 ### 3. Execute a trajectory and record data
 Run the launch file to execute the trajectory. For example :
 ```bash
-roslaunch plaza_path.launch
+roslaunch line_path.launch
 ```
 This launch file will:
 - Start a Python script for a predefined trajectory

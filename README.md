@@ -31,12 +31,12 @@ To ensure compatibility and stability, the project was developed using **Virtual
 ## 📂 Project Structure
 
 turtlebot3-trajectory-estimation/
-├── worlds/ # Custom .world files for Gazebo
-├── launch/ # Launch files for trajectory + data recording
-├── scripts/ # Python scripts for robot motion
-├── bags/ # rosbag output files (not included)
-├── results/ # Analysis plots and CSVs
-└── README.md # Project documentation
+- worlds/ # Custom .world files for Gazebo
+- launch/ # Launch files for trajectory + data recording
+- scripts/ # Python scripts for robot motion
+- bags/ # rosbag output files (not included)
+- results/ # Some analysis plots 
+- README.md # Project documentation
 
 ---
 
@@ -68,6 +68,6 @@ rostopic echo -b my_file.bag -p /odom > odom.csv
 ```
 
 🔄 Next Steps ?
-Implement sensor fusion to improve trajectory accuracy
-Visualize and compare trajectories from each sensor
-Compute estimation errors (e.g. RMSE vs. ground truth)
+- Implement sensor fusion to improve trajectory accuracy
+- Visualize and compare trajectories from each sensor
+- Compute estimation errors (e.g. RMSE vs. ground truth)

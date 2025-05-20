@@ -1,0 +1,12 @@
+<launch>
+    <!-- Argument pour nom du bag -->
+    <arg name="bag_name" default="waffle_path" />
+
+    <!-- Lancement de rosbag record -->
+    <node pkg="rosbag" type="record" name="rosbag_record" output="screen"
+          args="-O $(find my_turtlebot)/bags/$(arg bag_name).bag /odom /imu /scan /gazebo/model_states" />
+
+    <!-- Lancement du script de déplacement -->
+    <node pkg="my_turtlebot" type="waffle_path.py" name="move_robot" output="screen"
+          required="true" />
+</launch>

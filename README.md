@@ -53,7 +53,7 @@ roscore
 ### 1. Add your custom world
 Place your `.world` file in `turtlebot3_gazebo/worlds/`  
 Reference it in a launch file in `turtlebot3_gazebo/launch/`.
-Then launch the simulation:
+To launch the simulation:
 
 ```bash
 export TURTLEBOT3_MODEL=burger

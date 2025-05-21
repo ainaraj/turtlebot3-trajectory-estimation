@@ -31,11 +31,9 @@ To ensure compatibility and stability, the project was developed using **Virtual
 ## 📂 Project Structure
 
 turtlebot3-trajectory-estimation/
-- worlds/ # Custom .world files for Gazebo
-- launch/ # Launch files for trajectory + data recording
-- scripts/ # Python scripts for robot motion
-- bags/ # rosbag output files (not included)
-- results/ # Some analysis plots 
+- worlds/ # Custom .world files and launch files for Gazebo
+- trajectories/ # Launch files, Python scripts for robot motion
+- plots/ # Analysis plots of sensor fusion with EKF, including RMSE vs. ground truth
 - README.md # Project documentation
 
 ---
@@ -89,7 +87,7 @@ roslaunch line_path.launch
 ```
 This launch file will:
 - Start a Python script for a predefined trajectory
-- Begin recording /odom, /imu, and /scan with rosbag
+- Begin recording /odom, /imu, /scan and /model_states (ground truth) with rosbag
 - Stop recording automatically at the end of the motion
 - Ensure that robot motion and data recording are synchronized, resulting in accurate and reliable timestamps
 
